@@ -48,7 +48,7 @@ export default function Contact() {
                     <div
                       className={`w-12 h-12 ${method.color} rounded-full flex items-center justify-center`}
                     >
-                      <Icon className="text-white" size={24} />
+                      <Icon className="text-black" size={24} />
                     </div>
                     <div>
                       <h3 className="text-gray-900 font-semibold mb-1">{method.title}</h3>
@@ -83,10 +83,10 @@ export default function Contact() {
                   className={`block p-6 bg-gradient-to-r ${action.color} rounded-lg hover-lift transition-all duration-300`}
                 >
                   <div className="flex items-center gap-4">
-                    <MessageCircle size={32} className="text-white" />
+                    <MessageCircle size={32} className="text-green-500" />
                     <div>
-                      <h3 className="text-white font-bold text-lg">{action.title}</h3>
-                      <p className="text-white text-opacity-80">{action.description}</p>
+                      <h3 className="text-black font-bold text-lg">{action.title}</h3>
+                      <p className="text-slate-500 text-opacity-80">{action.description}</p>
                     </div>
                   </div>
                 </Link>

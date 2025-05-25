@@ -11,7 +11,6 @@ import {
   MessageCircle,
   ChevronLeft,
   ChevronRight,
-  Heart,
   Share2,
 } from "lucide-react"
 import { products } from "@/lib/data"
@@ -80,6 +79,23 @@ export default function ProductDetail() {
     window.open(`https://api.whatsapp.com/send?phone=919079179449&text=${encodeURIComponent(msg)}`, "_blank")
   }
 
+  // Share product link
+  const handleShare = () => {
+    const url = window.location.href
+    if (navigator.share) {
+      navigator.share({
+        title: product.title,
+        url,
+      }).catch((err) => {
+        console.error("Share failed:", err)
+      })
+    } else {
+      navigator.clipboard.writeText(url).then(() => {
+        alert("Product link copied to clipboard!")
+      })
+    }
+  }
+
   // Related products
   const related = products.filter((p) => p.category === product.category && p.id !== product.id).slice(0, 4)
   const handleRelatedClick = (id: string) => {
@@ -142,10 +158,10 @@ export default function ProductDetail() {
               </div>
               {/* Action Buttons */}
               <div className="absolute top-4 right-4 flex flex-col gap-2">
-                <button className="bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full shadow-lg transition-all duration-300">
-                  <Heart size={20} className="text-gray-600" />
-                </button>
-                <button className="bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full shadow-lg transition-all duration-300">
+                <button
+                  onClick={handleShare}
+                  className="bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full shadow-lg transition-all duration-300"
+                >
                   <Share2 size={20} className="text-gray-600" />
                 </button>
               </div>
@@ -263,7 +279,7 @@ export default function ProductDetail() {
                 <Clock className="text-blue-500 flex-shrink-0" size={24} />
                 <div>
                   <div className="text-gray-900 font-semibold text-sm">Instant Delivery</div>
-                  <div className="text-gray-600 text-xs">Within 24 hours</div>
+                  <div className="text-gray-600 text-xs">Within 5-10 minutes</div>
                 </div>
               </div>
               <div className="flex items-center gap-3 bg-gray-50 p-4 rounded-lg">
