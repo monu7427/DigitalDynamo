@@ -27,10 +27,10 @@ export default function PriceFilter({ onPriceFilter }: PriceFilterProps) {
   }
 
   return (
-    <div className="relative animate-slide-up">
+    <div className="relative  animate-slide-up">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-900 rounded-lg hover:bg-gray-200 transition-colors duration-300 border border-gray-300"
+        className="flex items-center gap-2 px-4 py-3 bg-gray-100 text-gray-900 rounded-lg hover:bg-gray-200 transition-colors duration-300 border border-gray-300"
       >
         <Filter size={20} />
         Price Filter

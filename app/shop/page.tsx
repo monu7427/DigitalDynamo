@@ -61,19 +61,19 @@ export default function Shop() {
 
   return (
     <div className="bg-white min-h-screen py-8">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto md:px-4">
         {/* Header */}
-        <div className="text-center mb-8 animate-slide-up">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-4 md:mb-8 animate-slide-up flex flex-col items-center">
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-900   md:mb-4">
             Browse All <span className="gradient-text">Subscriptions</span>
           </h1>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 text-sm md:text-lg w-[80%]">
             Discover premium digital services at unbeatable prices
           </p>
         </div>
 
         {/* Search and Filters */}
-        <div className="flex flex-col lg:flex-row gap-4 items-center justify-between mb-8">
+        <div className="flex gap-2 py-2 md:py-6 ">
           <div className="flex-1 max-w-md">
             <SearchBar onSearch={setSearchQuery} />
           </div>

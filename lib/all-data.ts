@@ -74,7 +74,7 @@ export const heroData = {
     {
       name: "Adobe Creative",
       price: "₹1999/year",
-      color: "bg-blue-500",
+      color: "bg-red-500",
       position: "top-16 -right-4",
       delay: "1s",
     },
