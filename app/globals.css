@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+* {
+  cursor: none;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  overflow-x: hidden;
+}
+
+/* Custom cursor */
+.cursor {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: #ffcc00;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+  mix-blend-mode: difference;
+}
+
+.cursor-blur {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 204, 0, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.3s ease;
+  filter: blur(20px);
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 204, 0, 0.8);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-shake {
+  animation: shake 2s ease-in-out infinite;
+}
+.animate-slide-up {
+  animation: slideInUp 0.6s ease-out;
+}
+.animate-slide-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+.animate-slide-right {
+  animation: slideInRight 0.6s ease-out;
+}
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+.animate-pulse-custom {
+  animation: pulse 2s ease-in-out infinite;
+}
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255, 204, 0, 0.2);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.6);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffcc00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9900;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-yellow-400 text-black font-semibold py-3 px-6 rounded-lg hover:bg-yellow-500 transition-all duration-300 hover-lift hover-glow;
+  }
+
+  .btn-secondary {
+    @apply bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-600 transition-all duration-300 hover-lift;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover-lift transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply border-yellow-400 shadow-2xl;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 py-12;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-yellow-400 transition-colors duration-300;
+  }
+}
