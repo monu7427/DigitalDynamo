@@ -19,13 +19,7 @@ export default function CursorEffect() {
 
   return (
     <>
-      <div
-        className="cursor"
-        style={{
-          left: `${mousePosition.x - 1}px`,
-          top: `${mousePosition.y - 1}px`,
-        }}
-      />
+
       <div
         className="cursor-blur"
         style={{
