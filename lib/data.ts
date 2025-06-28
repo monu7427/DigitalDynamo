@@ -12,9 +12,8 @@ export const products: Product[] = [
     availability: true,
     images: ["/images/linkedin1.png", "/images/linkedin2.png", "/images/linkedin3.jpg"],
     variations: [
-      { name: "1 Month", price: 199, originalPrice: 2500, subPrice: "For new & old accounts" },
-      { name: "6 Months", price: 999, originalPrice: 15000, subPrice: "For new & old accounts" },
-      { name: "12 Months", price: 1799, originalPrice: 30000, subPrice: "For new accounts only" },
+      { name: "1 Month", price: 1999, originalPrice: 12000, subPrice: "For new & old accounts" },
+      { name: "12 Months", price: 22999, originalPrice: 167988, subPrice: "For new & old accounts" },
     ],
   },
   {
@@ -25,7 +24,8 @@ export const products: Product[] = [
     availability: true,
     images: ["/images/linkedin1.png", "/images/linkedin2.png", "/images/linkedin3.jpg"],
     variations: [
-      { name: "4 Months", price: 1499, originalPrice: 20000, subPrice: "Limited slots available" },
+      { name: "4 Months", price: 3499, originalPrice: 17000, subPrice: "Limited slots available" },
+      { name: "4 Months", price: 14999, originalPrice: 50000, subPrice: "Limited slots available" },
     ],
   },
   {
@@ -36,7 +36,7 @@ export const products: Product[] = [
     availability: true,
     images: ["/images/linkedin1.png", "/images/linkedin2.png", "/images/linkedin3.jpg"],
     variations: [
-      { name: "₹7,000 Credit", price: 999, originalPrice: 7000, subPrice: "Valid for 30 days" },
+      { name: "₹8000 Credit", price: 799, originalPrice: 8000, subPrice: "Valid for 30 days" },
     ],
   },
 
@@ -49,7 +49,7 @@ export const products: Product[] = [
     availability: true,
     images: ["/images/adobe1.jpg", "/images/adobe2.jpg", "/images/adobe3.png"],
     variations: [
-      { name: "12 Months", price: 1999, originalPrice: 29000, subPrice: "All apps included" },
+      { name: "12 Months", price: 2999, originalPrice: 21070, subPrice: "All apps included" },
     ],
   },
   {
@@ -60,9 +60,7 @@ export const products: Product[] = [
     availability: true,
     images: ["/images/canva1.jpg", "/images/canva2.png", "/images/canva3.png", "/images/canva4.jpg"],
     variations: [
-      { name: "1 Month", price: 299, originalPrice: 3000, subPrice: "Single user license" },
-      { name: "12 Months", price: 699, originalPrice: 15000, subPrice: "Team access (5 users)" },
-    ],
+      { name: "1 Year", price: 299, originalPrice: 3000, subPrice: "Single user license" },
   },
   {
     id: "notion-plus",
@@ -72,7 +70,7 @@ export const products: Product[] = [
     availability: true,
     images: ["/images/notion1.png"],
     variations: [
-      { name: "12 Months", price: 399, originalPrice: 4000, subPrice: "Unlimited blocks" },
+      { name: "12 Months", price: 999, originalPrice: 4000, subPrice: "Unlimited blocks" },
     ],
   },
   {
@@ -96,7 +94,7 @@ export const products: Product[] = [
     availability: true,
     images: ["/images/github.png"],
     variations: [
-      { name: "12 Months", price: 499, originalPrice: 5000, subPrice: "Educational benefits" },
+      { name: "12 Months", price: 999, originalPrice: 5000, subPrice: "Educational benefits" },
     ],
   },
   {
@@ -129,8 +127,8 @@ export const products: Product[] = [
     availability: true,
     images: ["/images/chatgpt.png"],
     variations: [
-      { name: "3 Months", price: 599, originalPrice: 6000, subPrice: "Faster response times" },
-      { name: "12 Months", price: 1999, originalPrice: 24000, subPrice: "Best value annually" },
+      { name: "1 Months", price: 599, originalPrice: 2000, subPrice: "Faster response times" },
+      { name: "2 Months", price: 2499, originalPrice: 4000, subPrice: "Best value annually" },
     ],
   },
 
@@ -176,7 +174,7 @@ export const products: Product[] = [
     availability: true,
     images: ["/images/fb-poster.png"],
     variations: [
-      { name: "6 Months", price: 499, originalPrice: 5000, subPrice: "Unlimited posts" },
+      { name: "6 Months", price: 999, originalPrice: 5000, subPrice: "Unlimited posts" },
     ],
   },
 
@@ -184,26 +182,46 @@ export const products: Product[] = [
   {
     id: "netflix-premium",
     title: "Netflix Premium",
-    description: "4K Ultra HD streaming on up to 4 screens, ad-free.",
+    description: "4K Ultra HD streaming on 1 screens, ad-free.",
     category: "entertainment",
     availability: true,
     images: ["/images/netflix.png"],
     variations: [
-      { name: "1 Month", price: 299, originalPrice: 799, features: ["4K quality", "4 Screens", "Ad-free"] },
-      { name: "3 Months", price: 799, originalPrice: 2397, features: ["4K quality", "4 Screens", "Ad-free"] },
-      { name: "12 Months", price: 2599, originalPrice: 9588, features: ["Best Value", "Priority Support", "4K Ultra HD"] },
+      { name: "1 Month", price: 119, originalPrice: 799, features: ["4K quality", "1 Screens", "Ad-free"] },
+      { name: "3 Months", price: 249, originalPrice: 2397, features: ["4K quality", "1 Screens", "Ad-free"] },
+      { name: "12 Months", price: 599, originalPrice: 7999, features: ["Best Value", "Priority Support", "4K Ultra HD"] },
     ],
   },
   {
     id: "amazon-prime-video",
     title: "Amazon Prime Video",
-    description: "Unlimited movies & TV plus Prime delivery benefits.",
+    description: "Amazon Prime Video Subscription – Your Gateway to Limitless Entertainment
+    Discover an exceptional streaming experience with Amazon Prime Video Subscription, offering ad-free access to movies and shows in stunning UHD (2160 Pixel) quality. With instant activation and secure access, enjoy uninterrupted entertainment across multiple devices.
+    
+    Please note that this is a subscription to “Amazon Prime Video” only, and you will receive separate account credentials for an individual account to access it, we will not activate this on your email.
+    
+    Key Features:
+    Multi-Device Access: Stream your favorite content on mobile, TV, or laptop. Enjoy seamless viewing on up to 5 devices.
+    UHD Streaming: Experience theater-like visuals with Ultra HD quality, perfect for movie enthusiasts.
+    Ad-Free Content: Say goodbye to interruptions and enjoy smooth, immersive streaming.
+    Secure Login: After purchase, your subscription activates instantly on the email used. Reset the password anytime for added security.
+    How It Solves Your Entertainment Needs:
+    This Subscription offers a diverse library of content, including blockbuster movies, trending shows, and exclusive originals. The multi-device feature lets you share your subscription with family or enjoy on-the-go convenience. UHD quality ensures a premium experience, while ad-free viewing allows for uninterrupted binge-watching.
+    
+    Use Cases for Amazon Prime Video Subscription:
+    Family Viewing: Connect up to 5 devices for shared entertainment.
+    Travel Companion: Watch downloaded content offline on mobile.
+    Exclusive Content: Access Amazon Originals and top-rated shows anytime.
+    Secure Access: Log in with your email and reset your password for peace of mind.
+    Elevate your entertainment with Amazon Prime Video Subscription today. With instant activation and the ability to reset your password, you’re always in control of your account.
+    
+    Subscribe now to start your ad-free UHD streaming journey!",
     category: "entertainment",
     availability: true,
     images: ["/images/prime-1.jpg", "/images/prime-2.jpg"],
     variations: [
-      { name: "1 Month", price: 249, originalPrice: 299 },
-      { name: "6 Months", price: 1299, originalPrice: 1794 },
+      { name: "1 Month", price: 89, originalPrice: 299 },
+      { name: "6 Months", price: 349, originalPrice: 1499 },
     ],
   },
   {
@@ -214,19 +232,18 @@ export const products: Product[] = [
     availability: true,
     images: ["/images/youtube.png"],
     variations: [
-      { name: "12 Months", price: 599, originalPrice: 1800 },
+      { name: "1 Months", price: 49, originalPrice: 149 },
     ],
   },
   {
-    id: "spotify-family",
-    title: "Spotify Family",
-    description: "Ad-free music for up to 6 users, offline downloads.",
+    id: "Spotify",
+    title: "Spotify",
+    description: "Ad-free music, offline downloads.",
     category: "music",
     availability: true,
     images: ["/images/spotify-1.jpg", "/images/spotify-2.jpg"],
     variations: [
-      { name: "1 Month", price: 199, features: ["Up to 6 users", "Ad-free", "Download Songs"] },
-      { name: "6 Months", price: 499 },
+      { name: "3 Month", price: 199, features: [ "Ad-free music", "Download Songs"] },
     ],
   },
   {
@@ -237,8 +254,7 @@ export const products: Product[] = [
     availability: true,
     images: ["/images/zee5-1.jpg"],
     variations: [
-      { name: "6 Months", price: 149 },
-      { name: "12 Months", price: 280, originalPrice: 999 },
+      { name: "12 Months", price: 399, originalPrice: 999 },
     ],
   },
 ]
